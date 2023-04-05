@@ -38,3 +38,35 @@ plugins: []
 ## 2 git init
 
 ## 3 git add .
+
+## 4 git commit -m 'gh-pages'
+
+## 5
+
+git remote add origin https://github.com/cdazaparra/dc.git
+git branch -M main
+git push -u origin main
+
+## 6 vite.config.js
+
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+plugins: [react()],
+base: "cdazaparra.github.io/dc"
+});
+
+## 7 npm run build
+
+## 8 package.json
+
+"scripts": {
+"dev": "vite",
+"build": "vite build",
+"preview": "vite preview",
+"deploy": "gh-pages -d dist"
+},
+
+## 9 npm run deploy

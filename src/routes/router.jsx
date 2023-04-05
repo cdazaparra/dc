@@ -4,7 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 // PÁGINAS
 import Home from "../pages/Home";
 import Study from "../pages/Study";
-import Blog from "../pages/Blog";
+import Works from "../pages/Works";
 import NotFound from "../pages/NotFound";
 // COMPONENTE BASE
 import Layout from "../layout/Layout";
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
             element: <Study></Study>
           },
           {
-            path: "/blog",
-            element: <Blog></Blog>
+            path: "/works",
+            element: <Works></Works>
           }
         ]
       }
