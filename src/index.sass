@@ -1,0 +1,25 @@
+.active
+  color: white
+  text-decoration: underline
+
+@keyframes rotate
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+@keyframes rotateOff
+  0%
+    transform: rotate(360deg)
+  100%
+    transform: rotate(0deg)
+
+.icons
+  cursor: pointer
+  animation-name: rotateOff
+  animation-duration: 1s
+  &:hover
+    animation-name: rotate
+    animation-duration: 1s
+
+Body
+    background-color: rgb(243 244 246)
