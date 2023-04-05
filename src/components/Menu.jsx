@@ -51,7 +51,7 @@ const Menu = () => {
       >
         <div className="container justify-center align-middle text-sm lg:flex-grow">
           <NavLink
-            to="/"
+            to="/dc"
             className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block active:text-white"
           >
             Home
