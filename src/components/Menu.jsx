@@ -15,7 +15,7 @@ const Menu = () => {
   };
   return (
     <div className='"mt-0 fixed w-full z-10 top-0 text-center flex flex-wrap items-center justify-between bg-blue-400'>
-      <div className="mr-6 flex flex-shrink-0 items-center text-white">
+      <div className="mx-6 flex flex-shrink-0 items-center text-white">
         <img
           className="mr-3"
           alt="Logo dc"
@@ -29,7 +29,7 @@ const Menu = () => {
       </div>
       <div className="block lg:hidden">
         <button
-          className="flex items-center rounded border border-teal-400 px-3 py-2 text-blue-200 hover:border-white hover:text-white"
+          className="mx-4 flex items-center rounded border border-white-400 px-3 py-2 text-blue-200 hover:border-white hover:text-white"
           onClick={handleMenu}
         >
           <svg
@@ -45,26 +45,29 @@ const Menu = () => {
       <div
         className={
           state
-            ? "block grid w-full flex-grow items-center text-center lg:flex lg:w-auto"
-            : "block grid hidden w-full flex-grow items-center text-center lg:flex  lg:w-auto"
+            ? "block grid w-full flex-grow justify-items-center  items-center text-center lg:flex lg:w-auto"
+            : "block grid hidden w-full flex-grow justify-items-center  items-center text-center lg:flex  lg:w-auto"
         }
       >
         <div className="container justify-center align-middle text-sm lg:flex-grow">
           <NavLink
             to="/dc"
             className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block active:text-white"
+            onClick={handleMenu}
           >
             Home
           </NavLink>
           <NavLink
             to="/Study"
             className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"
+            onClick={handleMenu}
           >
             Estudios
           </NavLink>
           <Link
             to="/Works"
             className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"
+            onClick={handleMenu}
           >
             Trabajos
           </Link>
