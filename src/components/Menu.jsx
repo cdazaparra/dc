@@ -62,7 +62,10 @@ const Menu = () => {
           >
             Estudios
           </NavLink>
-          <Link className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block">
+          <Link
+            to="/Works"
+            className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"
+          >
             Trabajos
           </Link>
           <Link className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block">
