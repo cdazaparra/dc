@@ -70,3 +70,13 @@ base: "cdazaparra.github.io/dc"
 },
 
 ## 9 npm run deploy
+
+# Actualizacion
+
+## 1 git add .
+
+## 2 git commit -m 'gh-pages'
+
+## 3 npm run build
+
+## 4 npm run deploy
