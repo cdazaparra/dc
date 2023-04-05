@@ -2,6 +2,8 @@
 import imgPregado from "../assets/images/pregrado.png";
 import imgPostgrado from "../assets/images/postgrado.png";
 import imgMaestria from "../assets/images/maestria.png";
+import imgWork1 from "../assets/images/work1.png";
+import imgWork2 from "../assets/images/work2.png";
 export const dataStudy = [
   {
     id: 0,
@@ -11,7 +13,7 @@ export const dataStudy = [
     egreso: "2012",
     metodo: "Tesis de grado:",
     descripción:
-      "Software de análisis empresarial hecho en PHP, CSS y HTML para medianas y pequeñas empresas que permite un análisis de los inventarios"
+      "Software de análisis empresarial hecho en PHP, CSS y HTML para medianas y pequeñas empresas que permite un análisis de los inventarios."
   },
   {
     id: 1,
@@ -21,7 +23,7 @@ export const dataStudy = [
     egreso: "2018",
     metodo: "Tesis de grado:",
     descripción:
-      "Equivalencia de resultados en pruebas internas y externas en la lectura comunicativa y razonamiento matemático en la Institución Nuestra Señora del Carmen"
+      "Equivalencia de resultados en pruebas internas y externas en la lectura comunicativa y razonamiento matemático en la Institución Nuestra Señora del Carmen."
   },
   {
     id: 2,
@@ -31,7 +33,7 @@ export const dataStudy = [
     egreso: "2015",
     metodo: "Tesis de grado:",
     descripción:
-      "Sistema Integrado de Gestión de Calidad y Medio Ambiente en la especialidad de Ergonomía y Psicosociología Aplicada"
+      "Sistema Integrado de Gestión de Calidad y Medio Ambiente en la especialidad de Ergonomía y Psicosociología Aplicada."
   }
 ];
 export const dataCourses = [
@@ -478,5 +480,38 @@ export const dataSlider = [
       "Estado civil: Casado. El amor es algo que no es fácil de describir, pero es importante saber que cuentas con alguien y a su vez eres el apoyo de esa persona. Cada día trae algo nuevo y no todo es perfecto, pero aprendes y enseñas lo que es el trabajo en equipo cuando estas en casa.",
     description4:
       "Soy padre de un joven de 15 años. Él es alguien por quien vale la pena cada esfuerzo que se hace. Tengo dos macotas, un perro y una gata, cada uno un mundo y una personalidad totalmente diferentes."
+  }
+];
+
+export const dataWorks = [
+  {
+    id: 0,
+    src: imgWork1,
+    cargo: "Administrador de Bases de Datos",
+    empresa: "ESE Hospital Regional de Chiquinquirá",
+    ingreso: "Marzo de 2011",
+    egreso: "Agosto de 2011",
+    descripción:
+      "Administador de las bases de datos del hospital, generador de informes con SqlServer."
+  },
+  {
+    id: 1,
+    src: imgWork2,
+    cargo: "Coordinador de estadistica",
+    empresa: "ESE Hospital Regional de Chiquinquirá",
+    ingreso: "Septiembre de 2011",
+    egreso: "Octubre de 2011",
+    descripción:
+      "Analisis de datos del hospital por medio de consultas al servidos, generador de indicadores y análisis de riesgos."
+  },
+  {
+    id: 2,
+    src: imgWork2,
+    cargo: "Docente",
+    empresa: "Institución Educativa Albert Einstein",
+    ingreso: "Marzo de 2013",
+    egreso: "Octubre de 2013",
+    descripción:
+      "Analisis de datos del hospital por medio de consultas al servidos, generador de indicadores y análisis de riesgos."
   }
 ];
