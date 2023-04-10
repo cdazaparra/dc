@@ -64,16 +64,19 @@ const Menu = () => {
           >
             Estudios
           </NavLink>
-          <Link
+          <NavLink
             to="/Works"
             className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"
             onClick={handleMenu}
           >
             Trabajos
-          </Link>
-          <Link className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block">
-            Reconocimientos
-          </Link>
+          </NavLink>
+          <NavLink
+            to="/projects"
+            className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"
+          >
+            Proyectos
+          </NavLink>
         </div>
         <div className="container m-2 text-sm lg:flex-grow">
           <div className="grid grid-cols-3 justify-between justify-items-center gap-4">

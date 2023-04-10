@@ -8,6 +8,7 @@ import Works from "../pages/Works";
 import NotFound from "../pages/NotFound";
 // COMPONENTE BASE
 import Layout from "../layout/Layout";
+import Projects from "../pages/Projects";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
           {
             path: "/works",
             element: <Works></Works>
+          },
+          {
+            path: "/projects",
+            element: <Projects></Projects>
           }
         ]
       }

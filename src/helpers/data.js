@@ -4,9 +4,18 @@ import imgPostgrado from "../assets/images/postgrado.png";
 import imgMaestria from "../assets/images/maestria.png";
 import imgWork1 from "../assets/images/work1.png";
 import imgWork2 from "../assets/images/work2.png";
+import imgWork3 from "../assets/images/work3.png";
+import imgWork4 from "../assets/images/work4.png";
+import imgWork5 from "../assets/images/work5.png";
+import imgWork6 from "../assets/images/work6.png";
+let id = 0;
+const number = () => {
+  id = id + 1;
+  return id;
+};
 export const dataStudy = [
   {
-    id: 0,
+    id: number(),
     src: imgPregado,
     title: "Ingeniero de Sistemas",
     university: "Universidad Distrital Francisco José de Caldas",
@@ -16,7 +25,7 @@ export const dataStudy = [
       "Software de análisis empresarial hecho en PHP, CSS y HTML para medianas y pequeñas empresas que permite un análisis de los inventarios."
   },
   {
-    id: 1,
+    id: number(),
     src: imgPostgrado,
     title: "Especialista en docencia y pedagogía",
     university: "Fundación universitaria del Área Andina",
@@ -26,7 +35,7 @@ export const dataStudy = [
       "Equivalencia de resultados en pruebas internas y externas en la lectura comunicativa y razonamiento matemático en la Institución Nuestra Señora del Carmen."
   },
   {
-    id: 2,
+    id: number(),
     src: imgMaestria,
     title: "Magister en Sistemas Integrados de Gestión",
     university: "Universidad Internacional de la Rioja",
@@ -38,402 +47,402 @@ export const dataStudy = [
 ];
 export const dataCourses = [
   {
-    id: 1,
+    id: number(),
     name: "30 días de JavaScript",
     place: "Platzi"
   },
   {
-    id: 2,
+    id: number(),
     name: "Curso Básico de Computadores e Informática",
     place: "Platzi"
   },
   {
-    id: 3,
+    id: number(),
     name: "Curso Básico de JavaScript",
     place: "Platzi"
   },
   {
-    id: 4,
+    id: number(),
     name: "Curso Básico de Programación Orientada a Objetos con JavaScript",
     place: "Platzi"
   },
   {
-    id: 5,
+    id: number(),
     name: "Curso Básico de Tailwind 2 y 3",
     place: "Platzi"
   },
   {
-    id: 6,
+    id: number(),
     name: "Curso de Animaciones con CSS",
     place: "Platzi"
   },
   {
-    id: 7,
+    id: number(),
     name: "Curso de API REST con Javascript: Ejemplos con APIs reales",
     place: "Platzi"
   },
   {
-    id: 8,
+    id: number(),
     name: "Curso de API REST con Javascript: Fundamentos",
     place: "Platzi"
   },
   {
-    id: 9,
+    id: number(),
     name: "Curso de API REST con Javascript: Performance y Usabilidad",
     place: "Platzi"
   },
   {
-    id: 10,
+    id: number(),
     name: "Curso de Asincronismo con JavaScript",
     place: "Platzi"
   },
   {
-    id: 11,
+    id: number(),
     name: "Curso de Closures y Scope en JavaScript",
     place: "Platzi"
   },
   {
-    id: 12,
+    id: number(),
     name: "Curso de Complejidad Algorítmica con JavaScript",
     place: "Platzi"
   },
   {
-    id: 13,
+    id: number(),
     name: "Curso de Creación de Blogs con WordPress",
     place: "Platzi"
   },
   {
-    id: 14,
+    id: number(),
     name: "Curso de Creación de Tiendas en Línea con WooCommerce",
     place: "Platzi"
   },
   {
-    id: 15,
+    id: number(),
     name: "Curso de CSS Grid Básico",
     place: "Platzi"
   },
   {
-    id: 16,
+    id: number(),
     name: "Curso de Debugging con Chrome DevTools",
     place: "Platzi"
   },
   {
-    id: 17,
+    id: number(),
     name: "Curso de Diseño para Developers",
     place: "Platzi"
   },
   {
-    id: 18,
+    id: number(),
     name: "Curso de Diseño Web con CSS Grid y Flexbox",
     place: "Platzi"
   },
   {
-    id: 19,
+    id: number(),
     name: "Curso de Diseño y Creación de Plantillas de Email Marketing",
     place: "Platzi"
   },
   {
-    id: 20,
+    id: number(),
     name: "Curso de ECMAScript: Historia y Versiones de JavaScript",
     place: "Platzi"
   },
   {
-    id: 21,
+    id: number(),
     name: "Curso de Estructuras de Datos con JavaScript",
     place: "Platzi"
   },
   {
-    id: 22,
+    id: number(),
     name: "Curso Definitivo de HTML y CSS",
     place: "Platzi"
   },
   {
-    id: 23,
+    id: number(),
     name: "Curso de Flujo de Desarrollo Moderno CodeStream",
     place: "Platzi"
   },
   {
-    id: 24,
+    id: number(),
     name: "Curso de Frameworks y Librerías de JavaScript",
     place: "Platzi"
   },
   {
-    id: 25,
+    id: number(),
     name: "Curso de Frontend Developer",
     place: "Platzi"
   },
   {
-    id: 26,
+    id: number(),
     name: "Curso de Historia de la Innovación y el Emprendimiento con Diana Uribe",
     place: "Platzi"
   },
   {
-    id: 27,
+    id: number(),
     name: "Curso de Historia de la Programación: Lenguajes y Paradigmas",
     place: "Platzi"
   },
   {
-    id: 28,
+    id: number(),
     name: "Curso de Introducción a la Terminal y Línea de Comandos",
     place: "Platzi"
   },
   {
-    id: 29,
+    id: number(),
     name: "Curso de Introducción a la Web: Historia y Funcionamiento de Internet",
     place: "Platzi"
   },
   {
-    id: 30,
+    id: number(),
     name: "Curso de Introducción al Pensamiento Computacional con Python",
     place: "Platzi"
   },
   {
-    id: 31,
+    id: number(),
     name: "Curso de Introducción a React.js",
     place: "Platzi"
   },
   {
-    id: 32,
+    id: number(),
     name: "Curso de JavaScript Engine (V8) y el Navegador",
     place: "Platzi"
   },
   {
-    id: 33,
+    id: number(),
     name: "Curso de Manipulación de Arrays en JavaScript",
     place: "Platzi"
   },
   {
-    id: 34,
+    id: number(),
     name: "Curso de Manipulación del DOM",
     place: "Platzi"
   },
   {
-    id: 35,
+    id: number(),
     name: "Curso de Pensamiento Lógico: Algoritmos y Diagramas de Flujo",
     place: "Platzi"
   },
   {
-    id: 36,
+    id: number(),
     name: "Curso de Pensamiento Lógico: Lenguajes de Programación",
     place: "Platzi"
   },
   {
-    id: 37,
+    id: number(),
     name: "Curso de Pensamiento Lógico: Manejo de Datos, Estructuras y Funciones",
     place: "Platzi"
   },
   {
-    id: 38,
+    id: number(),
     name: "Curso de Preprocesadores CSS",
     place: "Platzi"
   },
   {
-    id: 39,
+    id: number(),
     name: "Curso de Prework: Configuración de Entorno de Desarrollo en Linux",
     place: "Platzi"
   },
   {
-    id: 40,
+    id: number(),
     name: "Curso de Prework: Configuración de Entorno de Desarrollo en macOS",
     place: "Platzi"
   },
   {
-    id: 41,
+    id: number(),
     name: "Curso de Prework: Configuración de Entorno de Desarrollo en Windows",
     place: "Platzi"
   },
   {
-    id: 42,
+    id: number(),
     name: "Curso de Programación Orientada a Objetos: POO",
     place: "Platzi"
   },
   {
-    id: 43,
+    id: number(),
     name: "Curso de React.js: Manejo Profesional del Estado",
     place: "Platzi"
   },
   {
-    id: 44,
+    id: number(),
     name: "Curso de React.js: Navegación con React Router",
     place: "Platzi"
   },
   {
-    id: 45,
+    id: number(),
     name: "Curso de React.js: Patrones de Render y Composición",
     place: "Platzi"
   },
   {
-    id: 46,
+    id: number(),
     name: "Curso de Responsive Design: Maquetación Mobile First",
     place: "Platzi"
   },
   {
-    id: 47,
+    id: number(),
     name: "Curso de Sistemas de Diseño Efectivos",
     place: "Platzi"
   },
   {
-    id: 48,
+    id: number(),
     name: "Curso de State Machines en React.js",
     place: "Platzi"
   },
   {
-    id: 49,
+    id: number(),
     name: "Curso de Tecnología para Gerentes y Directores",
     place: "Platzi"
   },
   {
-    id: 50,
+    id: number(),
     name: "Curso de Transformaciones y Transiciones en CSS",
     place: "Platzi"
   },
   {
-    id: 51,
+    id: number(),
     name: "Curso de Webpack",
     place: "Platzi"
   },
   {
-    id: 52,
+    id: number(),
     name: "Curso Intermedio de Programación Orientada a Objetos en JavaScript",
     place: "Platzi"
   },
   {
-    id: 53,
+    id: number(),
     name: "Curso Práctico de Frontend Developer",
     place: "Platzi"
   },
   {
-    id: 54,
+    id: number(),
     name: "Curso Práctico de HTML y CSS",
     place: "Platzi"
   },
   {
-    id: 55,
+    id: number(),
     name: "Curso Práctico de JavaScript",
     place: "Platzi"
   },
   {
-    id: 56,
+    id: number(),
     name: "Curso Práctico de Maquetación en CSS",
     place: "Platzi"
   },
   {
-    id: 57,
+    id: number(),
     name: "Curso Práctico de Maquetación y Animaciones con CSS",
     place: "Platzi"
   },
   {
-    id: 58,
+    id: number(),
     name: "Curso Práctico de React.js",
     place: "Platzi"
   },
   {
-    id: 59,
+    id: number(),
     name: "Curso Profesional de CSS Grid Layout",
     place: "Platzi"
   },
   {
-    id: 60,
+    id: number(),
     name: "Curso Profesional de Git y GitHub",
     place: "Platzi"
   },
   {
-    id: 61,
+    id: number(),
     name: "Curso Profesional de JavaScript",
     place: "Platzi"
   },
   {
-    id: 62,
+    id: number(),
     name: "Curso Profesional de React.js y Redux",
     place: "Platzi"
   },
   {
-    id: 63,
+    id: number(),
     name: "Fundamentos de Ingeniería de Software",
     place: "Platzi"
   },
   {
-    id: 64,
+    id: number(),
     name: "Laboratorio de JavaScript: Bugs en Proyecto de E-Commerce",
     place: "Platzi"
   },
   {
-    id: 65,
+    id: number(),
     name: "Taller Práctico de JavaScript: ¡Crea tu Primer Videojuego!",
     place: "Platzi"
   },
   {
-    id: 66,
+    id: number(),
     name: "Taller Práctico de JavaScript: Matemáticas y Estadística Básica",
     place: "Platzi"
   },
   {
-    id: 67,
+    id: number(),
     name: "Diseño Web Profesional El Curso Completo, Práctico y desde 0",
     place: "Udemy"
   },
   {
-    id: 68,
+    id: number(),
     name: "Curso Práctico de Django: Desarrollo Web Backend con Python",
     place: "Udemy"
   },
   {
-    id: 69,
+    id: number(),
     name: "Django y Flask - Desarrollo Web Profesional con Python",
     place: "Udemy"
   },
   {
-    id: 70,
+    id: number(),
     name: "Aprender a programar con Java. De cero hasta hacer sistemas",
     place: "Udemy"
   },
   {
-    id: 71,
+    id: number(),
     name: "Curso Django y Django rest framework de básico a profesional",
     place: "Udemy"
   },
   {
-    id: 72,
+    id: number(),
     name: "Vue 3 JS: Iníciate en este Framework",
     place: "Udemy"
   },
   {
-    id: 73,
+    id: number(),
     name: "Adobe XD: Aprende a crear prototipos profesionales desde 0",
     place: "Udemy"
   },
   {
-    id: 74,
+    id: number(),
     name: "Complementaria virtual en desarrollo de aplicaciones con manejo de archivos de texto y el manejo de excepciones en java",
     place: "Sena"
   },
   {
-    id: 75,
+    id: number(),
     name: "Complementaria virtual en desarrollo de aplicaciones con interfaz gráfica, manejo de eventos, clases y objetos: java",
     place: "Sena"
   },
   {
-    id: 76,
+    id: number(),
     name: "Complementaria virtual en programación de dispositivos móviles",
     place: "Sena"
   },
   {
-    id: 77,
+    id: number(),
     name: "Variables y estructuras de control en la programación orientada a objetos: java",
     place: "Sena"
   },
   {
-    id: 78,
+    id: number(),
     name: "Programación de páginas web con HTML y JavaScript",
     place: "Sena"
   },
   {
-    id: 79,
+    id: number(),
     name: "Calidad en el desarrollo de software",
     place: "Sena"
   },
   {
-    id: 80,
+    id: number(),
     name: "Informática: diseño de bases de datos en Sql",
     place: "Sena"
   }
@@ -441,7 +450,7 @@ export const dataCourses = [
 export const dataSlider = [
   {
     src: "https://picsum.photos/id/1011/1072",
-    id: 0,
+    id: number(),
     alt: "Carlos Daza",
     title: "Carlos Andres Daza Parra",
     description:
@@ -455,7 +464,7 @@ export const dataSlider = [
   },
   {
     src: "https://picsum.photos/id/1011/1072",
-    id: 1,
+    id: number(),
     alt: "image1",
     title: "Hobbies y otros",
     description4:
@@ -469,7 +478,7 @@ export const dataSlider = [
   },
   {
     src: "https://picsum.photos/id/1012/1072",
-    id: 2,
+    id: number(),
     alt: "image2",
     title: "Un poco sobre mí",
     description:
@@ -485,8 +494,8 @@ export const dataSlider = [
 
 export const dataWorks = [
   {
-    id: 0,
-    src: imgWork1,
+    id: number(),
+    src: imgWork2,
     cargo: "Administrador de Bases de Datos",
     empresa: "ESE Hospital Regional de Chiquinquirá",
     ingreso: "Marzo de 2011",
@@ -495,7 +504,7 @@ export const dataWorks = [
       "Administador de las bases de datos del hospital, generador de informes con SqlServer."
   },
   {
-    id: 1,
+    id: number(),
     src: imgWork2,
     cargo: "Coordinador de estadistica",
     empresa: "ESE Hospital Regional de Chiquinquirá",
@@ -505,13 +514,62 @@ export const dataWorks = [
       "Analisis de datos del hospital por medio de consultas al servidos, generador de indicadores y análisis de riesgos."
   },
   {
-    id: 2,
-    src: imgWork2,
+    id: number(),
+    src: imgWork1,
     cargo: "Docente",
     empresa: "Institución Educativa Albert Einstein",
     ingreso: "Marzo de 2013",
     egreso: "Octubre de 2013",
     descripción:
       "Analisis de datos del hospital por medio de consultas al servidos, generador de indicadores y análisis de riesgos."
+  },
+  {
+    id: number(),
+    src: imgWork3,
+    cargo: "Auditor",
+    empresa: "Audifin SAS",
+    ingreso: "Febrero de 2014",
+    egreso: "Junio de 2014",
+    descripción:
+      "Desarrollador del sistema de planeación estratégica, generador y auditor de indicadores de calidad. Análisis de estudios económicos. Mantenimiento del sistema de Calidad."
+  },
+  {
+    id: number(),
+    src: imgWork4,
+    cargo: "Docente investigador",
+    empresa: "Fundación Universitaria de San Gil Unisangil",
+    ingreso: "Febrero de 2015",
+    egreso: "Julio de 2018",
+    descripción:
+      "Docente de Administración de servidores, Aministrador de bases de datos, Análisis de algoritmos, Paradigmas de programación, Bases de datos, Desarrollo Web, Ingeniería de software, Formulación de proyectos, Estadística, Ingles, entre otros"
+  },
+  {
+    id: number(),
+    src: imgWork5,
+    cargo: "Director de proyecto",
+    empresa: "International Data Information And Consulting SAS",
+    ingreso: "Junio de 2020",
+    egreso: "Octubre de 2022",
+    descripción:
+      "Project Manager, Frontend Leader, React Developer, Desing Developer."
+  },
+  {
+    id: number(),
+    src: imgWork6,
+    cargo: "Docente",
+    empresa: "Secretaría de Educación de Boyacá",
+    ingreso: "Julio de 2018",
+    egreso: "Marzo de 2023",
+    descripción:
+      "Resolución de problemas, Desarrollo front end, Habilidades sociales, Desarrollo de software, Trabajo en equipo, JavaScript."
+  }
+];
+
+export const initialPosts = [
+  {
+    id: number(),
+    title: "Post 1",
+    content: "Contenido del post 1",
+    change: ""
   }
 ];
