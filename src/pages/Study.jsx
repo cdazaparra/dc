@@ -8,7 +8,7 @@ import { dataStudy, dataCourses } from "../helpers/data";
 const Study = () => {
   return (
     <div className="container m-auto p-0 mt-20">
-      <h1 className="my-4 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+      <h1 className="mt-4 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
         Estudios Profesionales
       </h1>
       <div className="grid grid-rows-1 mb-5">

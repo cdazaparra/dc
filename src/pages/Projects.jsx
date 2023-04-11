@@ -1,12 +1,14 @@
 import React from "react";
 import PostGeneratos from "../components/PostGeneratos";
+import TodoGenerator from "../components/TodoGenerator";
 
 const Projects = () => {
   return (
-    <div className="m-10 pt-10">
-      <h1 className="m-10">
+    <div className="my-10 pt-10 grid">
+      <div>
         <PostGeneratos></PostGeneratos>
-      </h1>
+        <TodoGenerator></TodoGenerator>
+      </div>
     </div>
   );
 };

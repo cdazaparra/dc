@@ -74,6 +74,7 @@ const Menu = () => {
           <NavLink
             to="/projects"
             className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"
+            onClick={handleMenu}
           >
             Proyectos
           </NavLink>
