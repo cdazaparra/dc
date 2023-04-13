@@ -59,7 +59,7 @@ const TodoGenerator = () => {
         Tareas
       </h1>
       {todoMaker && (
-        <div>
+        <div className="grid m-2 justify-items-center  items-center border border-lime-300">
           <TodoDescription></TodoDescription>
           <TodoFormulario addTodo={addTodo} />
           <Todos

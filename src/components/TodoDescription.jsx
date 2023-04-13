@@ -8,7 +8,9 @@ const TodoDescription = () => {
       </h2>
       <p className="text-center p-4">
         El proyecto está actualmente funcionando con contexto, usa sweet alert,
+        <br />
         localstorage y permite crear tareas, marcarlas por completadas y las
+        <br />
         ordena según la prioridad y si fueron realizadas.
       </p>
     </div>

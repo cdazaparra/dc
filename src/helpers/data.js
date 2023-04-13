@@ -8,6 +8,7 @@ import imgWork3 from "../assets/images/work3.png";
 import imgWork4 from "../assets/images/work4.png";
 import imgWork5 from "../assets/images/work5.png";
 import imgWork6 from "../assets/images/work6.png";
+const api = "https://pokeapi.co/api/v2/";
 let id = 0;
 const number = () => {
   id = id + 1;
@@ -48,7 +49,7 @@ export const dataStudy = [
 export const dataCourses = [
   {
     id: number(),
-    name: "30 días de JavaScript",
+    name: "Curso de Historias de Usuario en Scrum",
     place: "Platzi"
   },
   {

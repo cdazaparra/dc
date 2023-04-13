@@ -5,11 +5,11 @@ const Todo = ({ todo, deleteTodo, updateTodo }) => {
   const { title, description, state, priority, id } = todo;
 
   return (
-    <li className="list-group-item m-1 bg-white">
+    <li className="list-group-item p-8 bg-white">
       <div className="grid justify-items-center  items-center align-items-start border">
         <div className="grid justify-items-center  items-center grid-rows-3">
           <div className="grid justify-items-center  items-center">
-            {priority && (
+            {priority && !state && (
               <img
                 src={imgImportand}
                 alt="importand"

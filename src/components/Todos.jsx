@@ -2,8 +2,8 @@ import Todo from "../components/Todo";
 
 const Todos = ({ todos, deleteTodo, updateTodo }) => {
   return (
-    <div className="grid justify-content-center align-items-center border m-3 gap-2 text-center ">
-      <h1 className="my-4 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl cursor-pointer font-bold">
+    <div className="grid justify-content-center align-items-center border m-3 p-8 gap-2 text-center bg-white">
+      <h1 className="my-4 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl cursor-pointer font-bold m-2">
         Todos
       </h1>
       <ul className="list-group m-2">
