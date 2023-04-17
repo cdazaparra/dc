@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 //Componentes
 import TodoFormulario from "../components/TodoFormulario";
 import Todos from "../components/Todos";
-import TodoDescription from "./TodoDescription";
 // Estado inicial
 const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || [];
 const TodoGenerator = () => {
@@ -56,11 +55,10 @@ const TodoGenerator = () => {
         className="my-4 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl cursor-pointer font-bold"
         onClick={() => setTodoMaker(!todoMaker)}
       >
-        Tareas
+        Generador de Tareas
       </h1>
       {todoMaker && (
-        <div className="grid m-2 justify-items-center  items-center border border-lime-300">
-          <TodoDescription></TodoDescription>
+        <div className="grid m-2 justify-items-center  items-center border border-gray-300 rounded-xl">
           <TodoFormulario addTodo={addTodo} />
           <Todos
             todos={orderMake(orderTodo(todos))}

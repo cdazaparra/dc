@@ -7,7 +7,6 @@ import Post from "../components/Post";
 import PostButton from "../components/PostButton";
 // Data
 import { initialPosts } from "../helpers/data";
-import PostDescription from "./PostDescription";
 // Imágenes
 import btnDelete from "../assets/icons/eliminar.png";
 import btnEdit from "../assets/icons/editar.png";
@@ -59,8 +58,7 @@ const PostGeneratos = () => {
           Generador de post
         </h1>
         {poststate && (
-          <div className="justify-items-center  items-center border rounded m-3 gap-2 border-lime-300">
-            <PostDescription></PostDescription>
+          <div className="justify-items-center  items-center border m-3 gap-2 border-gray-300 rounded-xl">
             <PostAdd createPost={createPost} />
             <PostsLayout>
               {posts.map((post) => (

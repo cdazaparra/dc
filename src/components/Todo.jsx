@@ -5,40 +5,55 @@ const Todo = ({ todo, deleteTodo, updateTodo }) => {
   const { title, description, state, priority, id } = todo;
 
   return (
-    <li className="list-group-item p-8 bg-white">
-      <div className="grid justify-items-center  items-center align-items-start border">
-        <div className="grid justify-items-center  items-center grid-rows-3">
-          <div className="grid justify-items-center  items-center">
-            {priority && !state && (
+    <div
+      className={`grid justify-items-center  items-center align-items-center border bg-white rounded-3xl " ${
+        state ? "text-gray-200" : "text-black"
+      }`}
+    >
+      {state && <div className="text-black">Tarea Realizada</div>}
+      <div className="grid justify-items-center  items-center grid-rows-3">
+        {priority && !state && (
+          <div className="grid justify-items-center  items-center text-center">
+            <div className="grid grid-cols-3 justify-items-center  items-center">
+              <span className="font-bold uppercase text-center col-span-2 mx-2">
+                Es urgente
+              </span>
               <img
+                className="col-span-1 mx-2"
                 src={imgImportand}
                 alt="importand"
                 width="30"
-                className="justify-items-center  items-center"
               ></img>
-            )}
-            <h5 className={`${state && "line-through"} font-bold mx-2`}>
-              {title}
-            </h5>
+            </div>
+            <hr width="150"></hr>
           </div>
-          <p className={`${state && "line-through"}`}>{description}</p>
-          <div className="gap-2">
-            <button
-              onClick={() => deleteTodo(id)}
-              className="button p-1 m-1 bg-red-400 rounded-xl"
-            >
-              Eliminar
-            </button>
-            <button
-              onClick={() => updateTodo(id)}
-              className="button p-1 m-1 bg-yellow-400 rounded-xl"
-            >
-              Actualizar
-            </button>
-          </div>
+        )}
+        <div className="grid grid-rows-2  justify-items-center  items-center">
+          <span className="mt-2 mx-2">Nombre de la tarea:</span>
+          <h5 className={`${state && "line-through"} font-bold mx-2`}>
+            {title}
+          </h5>
+        </div>
+        <div className="grid grid-rows-2  justify-items-center  items-center">
+          <span className="mt-2">Descripción de la tarea:</span>
+          <p className={`${state && "line-through"} italic`}>{description}</p>
+        </div>
+        <div className="m-2 grid grid-cols-2">
+          <button
+            onClick={() => deleteTodo(id)}
+            className="button px-2 bg-red-100 rounded-xl hover:bg-red-400"
+          >
+            Eliminar
+          </button>
+          <button
+            onClick={() => updateTodo(id)}
+            className="button px-2 bg-yellow-100 rounded-xl hover:bg-yellow-400"
+          >
+            Actualizar
+          </button>
         </div>
       </div>
-    </li>
+    </div>
   );
 };
 

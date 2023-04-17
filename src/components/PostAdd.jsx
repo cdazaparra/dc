@@ -16,7 +16,7 @@ export default function PostAdd({ createPost }) {
   };
 
   return (
-    <div className="justify-items-center  items-center border rounded m-3 grid border-gray-300 bg-white">
+    <div className="justify-items-center  items-center border m-3 grid border-gray-300 bg-white rounded-xl">
       <h2 className="text-center my-2 text-xl sm:text-1xl md:text-1xl lg:text-2xl xl:text-2xl 2xl:text-3xl font-bold">
         Crea un post
       </h2>
