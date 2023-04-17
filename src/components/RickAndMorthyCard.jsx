@@ -4,7 +4,11 @@ const RickAndMorthyCard = ({ character }) => {
   return (
     <div className="grid justify-items-center  items-center border-gray-400 border rounded-xl m-1">
       <div className="font-bold uppercase text-center">{character.name}</div>
-      <img src={character.image} alt={character.name}></img>
+      <img
+        src={character.image}
+        alt={character.name}
+        className="rounded-full"
+      ></img>
       <div className="grid  justify-items-start  items-center m-1">
         <div>
           <span className="font-bold">Estado:</span> {character.status}
