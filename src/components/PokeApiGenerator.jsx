@@ -8,6 +8,7 @@ import PokeCard from "./PokeCard";
 const PokeApiGenerator = () => {
   const [state, setState] = useState(false);
   const [pokemonsList, setPokemonsList] = useState([]);
+  const [search, setSearch] = useState("");
   const urlBase = "https://pokeapi.co/api/v2/pokemon?limit=150&offset=0";
   useEffect(() => {
     (async () => {
@@ -18,6 +19,11 @@ const PokeApiGenerator = () => {
     const response = await getPokemonApi(urlBase);
     setPokemonsList(response);
   };
+  const searchPokemon = (e) => {
+    e.preventDefault();
+    setSearch(e.target.value);
+  };
+  const validator = search === "" ? true : false;
   return (
     <div className="grid m-2 justify-items-center  items-center border border-lime-300 p-2">
       <h1
@@ -27,18 +33,49 @@ const PokeApiGenerator = () => {
         PokeApi
       </h1>
       {state && (
-        <div className="grid m-2 justify-items-center  items-center border border-lime-300 p-2">
-          <div>
+        <div className="grid m-2 justify-items-center  items-center border border-gray-300 rounded-xl">
+          <div className="m-2">
             <img src={imgPokeBall} alt="Pokeball" width="50"></img>
           </div>
-          <div className="my-4">
-            {/* <input placeholder="Buscar..."></input> */}
+          <div className="m-4">
+            <input
+              className="rounded-xl p-1"
+              placeholder="Buscar..."
+              onChange={searchPokemon}
+            ></input>
           </div>
           <div>
             {/* <PokeList pokemonsList={pokemonsList}></PokeList> */}
-            <div className="grid grid-cols-1 sm:grid-cols-3  justify-items-center  items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5  xl:grid-cols-6 justify-items-center  items-center">
               {pokemonsList.map((pokemons) => (
-                <PokeCard pokemons={pokemons} key={pokemons.id}></PokeCard>
+                <div key={pokemons.id}>
+                  <div>
+                    {validator && (
+                      <div>
+                        <PokeCard
+                          pokemons={pokemons}
+                          key={pokemons.id}
+                          search={search}
+                        ></PokeCard>
+                      </div>
+                    )}
+                  </div>
+                  <div>
+                    {!validator && (
+                      <div>
+                        {pokemons.name.includes(search) && (
+                          <div>
+                            <PokeCard
+                              pokemons={pokemons}
+                              key={pokemons.id}
+                              search={search}
+                            ></PokeCard>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </div>
               ))}
             </div>
           </div>

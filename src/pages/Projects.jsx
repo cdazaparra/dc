@@ -2,6 +2,7 @@ import React from "react";
 import PostGeneratos from "../components/PostGeneratos";
 import TodoGenerator from "../components/TodoGenerator";
 import PokeApiGenerator from "../components/PokeApiGenerator";
+import RickAndMortyGenerator from "../components/RickAndMortyGenerator";
 
 const Projects = () => {
   return (
@@ -10,6 +11,7 @@ const Projects = () => {
         <PostGeneratos></PostGeneratos>
         <TodoGenerator></TodoGenerator>
         <PokeApiGenerator></PokeApiGenerator>
+        <RickAndMortyGenerator></RickAndMortyGenerator>
       </div>
     </div>
   );

@@ -1,13 +1,24 @@
 import React from "react";
 const PokeCard = ({ pokemons }) => {
   return (
-    <div className="grid grid-rows-3 border">
-      <div className="grid grid-cols-5  justify-items-center  items-center">
-        <h1 className="grid col-span-4">Name: {pokemons.name}</h1>
-        <p className="grid col-span-1">😐</p>
-        <p>Hola</p>
+    <div className="grid border rounded-lg justify-items-center  items-center bg-white m-1">
+      <h1 className="font-bold uppercase">{pokemons.name}</h1>
+      <img
+        src={pokemons.sprites.front_default}
+        alt="Pokemon name"
+        width="150"
+      ></img>
+      <div>
+        <p>
+          <span className="font-bold">Tipo:</span> {pokemons.types[0].type.name}
+        </p>
+        <p>
+          <span className="font-bold">Peso:</span> {pokemons.weight}
+        </p>
+        <p>
+          <span className="font-bold">Altura:</span> {pokemons.height}
+        </p>
       </div>
-      <img src={pokemons.sprites.back_default} alt="Pokemon name"></img>
     </div>
   );
 };
