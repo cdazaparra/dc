@@ -2,7 +2,7 @@ import React from "react";
 
 const WorksPlace = ({ data }) => {
   return (
-    <div className="grid grid-cols-2  justify-items-center  items-center border rounded m-3 gap-2 border-lime-300">
+    <div className="grid grid-cols-2  justify-items-center  items-center border rounded-xl m-3 gap-2 border-lime-300 bg-white">
       <div className="p-2">
         <img src={data.src}></img>
       </div>

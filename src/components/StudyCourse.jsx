@@ -15,9 +15,9 @@ const StudyCourse = ({ data }) => {
     }
   };
   return (
-    <div className="col-span-1 grid grid-cols-3 border  justify-items-center  items-center border-rounded m-2">
+    <div className="grid grid-cols-4 border  justify-items-center  items-center rounded-xl bg-white m-2 p-2">
       <img className="rounded-full p-5" src={srcImg()}></img>
-      <p className="col-span-2">{data.name}</p>
+      <p className="col-span-3 text-justify p-1">{data.name}</p>
     </div>
   );
 };

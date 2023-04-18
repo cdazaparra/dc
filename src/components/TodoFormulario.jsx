@@ -1,5 +1,7 @@
 import Swal from "sweetalert2";
 import { useState } from "react";
+//Context
+import { useLanguajeContex } from "../context/LanguajeContex";
 
 const TodoFormulario = ({ addTodo }) => {
   const [todo, setTodo] = useState({
@@ -9,6 +11,7 @@ const TodoFormulario = ({ addTodo }) => {
     priority: true
   });
 
+  const { languaje } = useLanguajeContex();
   const { title, description, state, priority } = todo;
 
   const handleSubmit = (e) => {
@@ -49,7 +52,7 @@ const TodoFormulario = ({ addTodo }) => {
   return (
     <div>
       <h1 className="my-5 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl cursor-pointer font-bold">
-        Crea Una Tarea
+        {languaje ? "Todo Create" : "Crea Una Tarea"}
       </h1>
       <div className="grid align-items-center border rounded-xl m-3 gap-2 text-center bg-white">
         <form
@@ -59,7 +62,7 @@ const TodoFormulario = ({ addTodo }) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 m-2 justify-items-center  items-center">
             <div className="grid m-2 justify-items-center  items-center">
               <label htmlFor="titleTodo" className="font-bold my-1">
-                Tarea:
+                {languaje ? "Todo" : "Tarea:"}
               </label>
               <input
                 type="text"
@@ -73,7 +76,7 @@ const TodoFormulario = ({ addTodo }) => {
             </div>
             <div className="grid m-2 justify-items-center  items-center">
               <label htmlFor="descriptionTodo" className="font-bold my-1">
-                Descripción:
+                {languaje ? "Description:" : "Descripción:"}
               </label>
               <textarea
                 className=" border rounded-lg text-center border-blue-200"
@@ -95,7 +98,10 @@ const TodoFormulario = ({ addTodo }) => {
                 checked={priority}
                 onChange={handleChange}
               />
-              <label htmlFor="inputCheck">Dar prioridad</label>
+
+              <label htmlFor="inputCheck">
+                {languaje ? "Priority:" : "Dar prioridad:"}
+              </label>
             </div>
             <select
               className=" border rounded-lg text-center m-2 border-blue-200"
@@ -103,8 +109,12 @@ const TodoFormulario = ({ addTodo }) => {
               value={state}
               onChange={handleChange}
             >
-              <option value="pendiente">Pendiente</option>
-              <option value="completado">Completado</option>
+              <option value="pendiente">
+                {languaje ? "Pending" : "Pendiente"}
+              </option>
+              <option value="completado">
+                {languaje ? "Completed" : "Completado"}
+              </option>
             </select>
           </div>
 
@@ -112,7 +122,7 @@ const TodoFormulario = ({ addTodo }) => {
             type="submit"
             className="button bg-blue-600 rounded-lg p-2 text-white hover:bg-blue-400 my-3"
           >
-            Agregar Todo
+            {languaje ? "Add Todo" : "Agregar Todo"}
           </button>
         </form>
       </div>

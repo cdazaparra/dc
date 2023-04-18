@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import PokeList from "./PokeList";
 import getPokemonApi from "../api/getPokemonApi";
 //Imagenes
 import imgPokeBall from "../assets/images/pokeball.png";

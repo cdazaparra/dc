@@ -6,9 +6,13 @@ import btnLeft from "../assets/icons/left.png";
 import btnRight from "../assets/icons/right.png";
 import background1 from "../assets/images/matri.jpeg";
 import HomeSliderData from "./HomeSliderData";
+//Context
+import { useLanguajeContex } from "../context/LanguajeContex";
 // Arreglo con información de lo que soy
-import { dataSlider } from "../helpers/data";
+import { dataSliderEs, dataSliderEn } from "../helpers/data";
 const HomeSlider = () => {
+  const { languaje } = useLanguajeContex();
+  const dataSlider = languaje ? dataSliderEn : dataSliderEs;
   const [imagenActual, setImagenActual] = useState(0);
   const cantidad = dataSlider?.length;
   const siguienteImagen = () => {

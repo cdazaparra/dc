@@ -5,7 +5,10 @@ import TodoFormulario from "../components/TodoFormulario";
 import Todos from "../components/Todos";
 // Estado inicial
 const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || [];
+//Context
+import { useLanguajeContex } from "../context/LanguajeContex";
 const TodoGenerator = () => {
+  const { languaje } = useLanguajeContex();
   const [todos, setTodos] = useState(initialStateTodos);
   const [todoMaker, setTodoMaker] = useState(false);
 
@@ -55,7 +58,7 @@ const TodoGenerator = () => {
         className="my-4 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl cursor-pointer font-bold"
         onClick={() => setTodoMaker(!todoMaker)}
       >
-        Generador de Tareas
+        {languaje ? "Todo Maker" : "Generador de Tareas"}
       </h1>
       {todoMaker && (
         <div className="grid m-2 justify-items-center  items-center border border-gray-300 rounded-xl">

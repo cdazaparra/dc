@@ -10,8 +10,11 @@ import { initialPosts } from "../helpers/data";
 // Imágenes
 import btnDelete from "../assets/icons/eliminar.png";
 import btnEdit from "../assets/icons/editar.png";
+//Context
+import { useLanguajeContex } from "../context/LanguajeContex";
 
 const PostGeneratos = () => {
+  const { languaje } = useLanguajeContex();
   const [posts, setPosts] = useState(initialPosts);
   const [state, setState] = useState(false);
   const [poststate, setPostState] = useState(false);
@@ -47,15 +50,16 @@ const PostGeneratos = () => {
         className="my-4 text-center text-xl"
         onClick={() => setPostState(!poststate)}
       >
-        Actualmente está en construcción, se debe dar click en el título del
-        proyecto para verlo
+        {languaje
+          ? "It is currently under construction, needs to must click on the title of the project to see"
+          : "Actualmente está en construcción, se debe dar click en el título del proyecto para verlo"}
       </h1>
       <div className="grid m-2 justify-items-center  items-center border border-lime-300">
         <h1
           className="my-4 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl cursor-pointer font-bold"
           onClick={() => setPostState(!poststate)}
         >
-          Generador de post
+          {languaje ? "Post Generator" : "Generador de post"}
         </h1>
         {poststate && (
           <div className="justify-items-center  items-center border m-3 gap-2 border-gray-300 rounded-xl">
@@ -94,7 +98,11 @@ const PostGeneratos = () => {
                 </Post>
               ))}
 
-              {posts.length === 0 && <article>No hay Posts</article>}
+              {posts.length === 0 && (
+                <article>
+                  {languaje ? "There are no posts" : "No hay Posts"}
+                </article>
+              )}
             </PostsLayout>
           </div>
         )}

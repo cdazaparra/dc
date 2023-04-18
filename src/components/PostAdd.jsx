@@ -1,6 +1,8 @@
 import PostButton from "./PostButton";
-
+//Context
+import { useLanguajeContex } from "../context/LanguajeContex";
 export default function PostAdd({ createPost }) {
+  const { languaje } = useLanguajeContex();
   const onSubmit = (e) => {
     e.preventDefault();
 
@@ -18,7 +20,7 @@ export default function PostAdd({ createPost }) {
   return (
     <div className="justify-items-center  items-center border m-3 grid border-gray-300 bg-white rounded-xl">
       <h2 className="text-center my-2 text-xl sm:text-1xl md:text-1xl lg:text-2xl xl:text-2xl 2xl:text-3xl font-bold">
-        Crea un post
+        {languaje ? "Create a Post" : "Crea un post"}
       </h2>
       <form
         className="justify-items-center  items-center my-1 container"
@@ -28,24 +30,23 @@ export default function PostAdd({ createPost }) {
         <div className="grid grid-rows-1 items-center m-2">
           <div className="grid input-group-text justify-items-center items-center m-2">
             <label htmlFor="title" id="lables-title">
-              Titulo:
+              {languaje ? "Title:" : "Titulo:"}
             </label>
           </div>
           <div className="grid input-group-text  justify-items-center items-center m-2">
             <input
               id="title"
               type="text"
-              placeholder="Título"
               name="title"
-              defaultValue="Post"
               className="px-1 text-center border rounded-lg"
+              required
             />
           </div>
         </div>
         <div className="grid grid-rows-1 items-center m-2">
           <div className="grid input-group-text justify-items-center items-center m-2">
             <label htmlFor="content" id="lables-content">
-              Contenido
+              {languaje ? "Content:" : "Contenido:"}
             </label>
           </div>
           <div className="grid input-group-text  justify-items-center items-center m-2">
@@ -53,9 +54,8 @@ export default function PostAdd({ createPost }) {
               id="content"
               className="px-4 text-center border rounded-lg"
               type="text"
-              placeholder="Contenido"
               name="content"
-              defaultValue="Contenido del post"
+              required
             />
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function PostAdd({ createPost }) {
             type="submit"
             className="rounded-lg bg-lime-500 px-3 py-2 font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-lime-600"
           >
-            Crear Post
+            {languaje ? "Create a Post" : "Crear Publicación"}
           </PostButton>
         </div>
       </form>

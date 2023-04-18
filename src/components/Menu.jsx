@@ -2,17 +2,23 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
+//Context
+import { useLanguajeContex } from "../context/LanguajeContex";
 //Imagenes
 import imgLogo from "../assets/images/logo.png";
 import imgPositionMenu from "../assets/icons/diagram.png";
 import imgThemeMenu from "../assets/icons/day-and-night.png";
 import imgLanguageMenuEs from "../assets/icons/languageEs.png";
+import imgLanguageMenuEng from "../assets/icons/languageEng.png";
 
 const Menu = () => {
   const [state, setState] = useState(false);
   const handleMenu = () => {
     setState(!state);
   };
+  const { languaje } = useLanguajeContex();
+  const { handleClick } = useLanguajeContex();
+  const { languajeSelected } = useLanguajeContex();
   return (
     <div className='"mt-0 fixed w-full z-10 top-0 text-center flex flex-wrap items-center justify-between bg-blue-400'>
       <div className="mx-6 flex flex-shrink-0 items-center text-white">
@@ -55,28 +61,28 @@ const Menu = () => {
             className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block active:text-white"
             onClick={handleMenu}
           >
-            Home
+            {languajeSelected.menuHome}
           </NavLink>
           <NavLink
             to="/Study"
             className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"
             onClick={handleMenu}
           >
-            Estudios
+            {languajeSelected.menuStudies}
           </NavLink>
           <NavLink
             to="/Works"
             className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"
             onClick={handleMenu}
           >
-            Trabajos
+            {languajeSelected.menuWorks}
           </NavLink>
           <NavLink
             to="/projects"
             className="mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"
             onClick={handleMenu}
           >
-            Proyectos
+            {languajeSelected.menuProjects}
           </NavLink>
         </div>
         <div className="container m-2 text-sm lg:flex-grow">
@@ -96,11 +102,12 @@ const Menu = () => {
               height="25"
             ></img>
             <img
-              src={imgLanguageMenuEs}
+              src={languaje ? imgLanguageMenuEng : imgLanguageMenuEs}
               className="icons col-span-1 mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"
               alt="Languaje Eng or Esp"
               width="25"
               height="25"
+              onClick={handleClick}
             ></img>
           </div>
         </div>

@@ -1,6 +1,8 @@
 import React from "react";
-
+//Context
+import { useLanguajeContex } from "../context/LanguajeContex";
 const HomeSliderData = ({ image }) => {
+  const { languajeSelected } = useLanguajeContex();
   return (
     <div key={image.id} className="col-span-8 rounded bg-blue-50/70 p-1 -mx-10">
       <h1 className="my-4 text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl">
