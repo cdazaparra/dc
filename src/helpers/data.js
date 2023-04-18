@@ -53,6 +53,11 @@ export const dataStudy = [
 export const dataCourses = [
   {
     id: number(),
+    name: "Curso Profesional de Scrum",
+    place: "Platzi"
+  },
+  {
+    id: number(),
     name: "Curso de Accesibilidad Web",
     place: "Platzi"
   },
