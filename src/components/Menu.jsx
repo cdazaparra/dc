@@ -92,7 +92,7 @@ const Menu = () => {
           </NavLink>
         </div>
         <div className="container m-2 text-sm lg:flex-grow">
-          <div className="grid grid-cols-3 justify-between justify-items-center gap-4">
+          <div className="grid grid-cols-2 justify-between justify-items-center gap-4">
             <img
               src={imgThemeMenu}
               className="icons col-span-1 mr-4 mt-4 block  text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block "
@@ -101,13 +101,13 @@ const Menu = () => {
               height="25"
               onClick={handleColor}
             ></img>
-            <img
+            {/* <img
               className="icons col-span-1 mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"
               alt="Change menu position"
               src={imgPositionMenu}
               width="25"
               height="25"
-            ></img>
+            ></img> */}
             <img
               src={languaje ? imgLanguageMenuEng : imgLanguageMenuEs}
               className="icons col-span-1 mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"
