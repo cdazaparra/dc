@@ -1,8 +1,12 @@
 import PostButton from "./PostButton";
 //Context
 import { useLanguajeContex } from "../context/LanguajeContex";
+import { useInteractionContex } from "../context/InteractionContex";
 export default function PostAdd({ createPost }) {
   const { languaje } = useLanguajeContex();
+  const { borderSelectedGray } = useInteractionContex();
+  const { borderSelectedGreen } = useInteractionContex();
+  const { colorSelectedGreen } = useInteractionContex();
   const onSubmit = (e) => {
     e.preventDefault();
 
@@ -18,7 +22,9 @@ export default function PostAdd({ createPost }) {
   };
 
   return (
-    <div className="justify-items-center  items-center border m-3 grid border-gray-300 bg-white rounded-xl">
+    <div
+      className={`justify-items-center  items-center border m-3 grid ${borderSelectedGray} bg-white rounded-xl`}
+    >
       <h2 className="text-center my-2 text-xl sm:text-1xl md:text-1xl lg:text-2xl xl:text-2xl 2xl:text-3xl font-bold">
         {languaje ? "Create a Post" : "Crea un post"}
       </h2>
@@ -38,7 +44,7 @@ export default function PostAdd({ createPost }) {
               id="title"
               type="text"
               name="title"
-              className="px-1 text-center border rounded-lg"
+              className={`px-1 text-center border ${borderSelectedGreen} rounded-lg`}
               required
             />
           </div>
@@ -52,7 +58,7 @@ export default function PostAdd({ createPost }) {
           <div className="grid input-group-text  justify-items-center items-center m-2">
             <input
               id="content"
-              className="px-4 text-center border rounded-lg"
+              className={`px-1 text-center border ${borderSelectedGreen} rounded-lg`}
               type="text"
               name="content"
               required
@@ -62,7 +68,7 @@ export default function PostAdd({ createPost }) {
         <div className="grid input-group-text  justify-items-center items-center">
           <PostButton
             type="submit"
-            className="rounded-lg bg-lime-500 px-3 py-2 font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-lime-600"
+            className={`rounded-lg ${colorSelectedGreen} px-3 py-2 font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-200 hover:bg-lime-600`}
           >
             {languaje ? "Create a Post" : "Crear Publicación"}
           </PostButton>

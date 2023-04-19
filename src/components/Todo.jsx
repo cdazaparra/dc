@@ -3,13 +3,15 @@ import React from "react";
 import imgImportand from "../assets/icons/advertencia.png";
 //Context
 import { useLanguajeContex } from "../context/LanguajeContex";
+import { useInteractionContex } from "../context/InteractionContex";
 const Todo = ({ todo, deleteTodo, updateTodo }) => {
   const { title, description, state, priority, id } = todo;
+  const { borderSelectedGreen } = useInteractionContex();
 
   const { languaje } = useLanguajeContex();
   return (
     <div
-      className={`grid justify-items-center  items-center align-items-center border bg-white rounded-3xl " ${
+      className={`grid justify-items-center  items-center align-items-center border ${borderSelectedGreen} bg-white rounded-3xl " ${
         state ? "text-gray-200" : "text-black"
       }`}
     >

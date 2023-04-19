@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 //Context
 import { useLanguajeContex } from "../context/LanguajeContex";
+import { useInteractionContex } from "../context/InteractionContex";
 //Imagenes
 import imgLogo from "../assets/images/logo.png";
 import imgPositionMenu from "../assets/icons/diagram.png";
@@ -19,8 +20,13 @@ const Menu = () => {
   const { languaje } = useLanguajeContex();
   const { handleClick } = useLanguajeContex();
   const { languajeSelected } = useLanguajeContex();
+  const { color } = useInteractionContex();
+  const { colorSelectedBlue } = useInteractionContex();
+  const { handleColor } = useInteractionContex();
   return (
-    <div className='"mt-0 fixed w-full z-10 top-0 text-center flex flex-wrap items-center justify-between bg-blue-400'>
+    <div
+      className={`mt-0 fixed w-full z-10 top-0 text-center flex flex-wrap items-center justify-between ${colorSelectedBlue}`}
+    >
       <div className="mx-6 flex flex-shrink-0 items-center text-white">
         <img
           className="mr-3"
@@ -93,6 +99,7 @@ const Menu = () => {
               alt="Dark and light mode"
               width="25"
               height="25"
+              onClick={handleColor}
             ></img>
             <img
               className="icons col-span-1 mr-4 mt-4 block text-lg text-blue-100 hover:text-white lg:mt-0 lg:inline-block"

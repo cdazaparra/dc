@@ -7,7 +7,7 @@ import RickAndMortyGenerator from "../components/RickAndMortyGenerator";
 const Projects = () => {
   return (
     <div className="my-10 pt-10 grid">
-      <div>
+      <div className="grid items-center">
         <PostGeneratos></PostGeneratos>
         <TodoGenerator></TodoGenerator>
         <PokeApiGenerator></PokeApiGenerator>

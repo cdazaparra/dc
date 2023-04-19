@@ -12,6 +12,7 @@ import btnDelete from "../assets/icons/eliminar.png";
 import btnEdit from "../assets/icons/editar.png";
 //Context
 import { useLanguajeContex } from "../context/LanguajeContex";
+import { useInteractionContex } from "../context/InteractionContex";
 
 const PostGeneratos = () => {
   const { languaje } = useLanguajeContex();
@@ -19,7 +20,8 @@ const PostGeneratos = () => {
   const [state, setState] = useState(false);
   const [poststate, setPostState] = useState(false);
   const [change, setChange] = useState("");
-
+  const { borderSelectedGreen } = useInteractionContex();
+  const { borderSelectedGray } = useInteractionContex();
   const createPost = (post) => {
     setPosts([...posts, post]);
   };
@@ -54,7 +56,9 @@ const PostGeneratos = () => {
           ? "It is currently under construction, needs to must click on the title of the project to see"
           : "Actualmente está en construcción, se debe dar click en el título del proyecto para verlo"}
       </h1>
-      <div className="grid m-2 justify-items-center  items-center border border-lime-300">
+      <div
+        className={`grid m-2 justify-items-center  items-center border ${borderSelectedGreen}`}
+      >
         <h1
           className="my-4 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl cursor-pointer font-bold"
           onClick={() => setPostState(!poststate)}
@@ -62,7 +66,9 @@ const PostGeneratos = () => {
           {languaje ? "Post Generator" : "Generador de post"}
         </h1>
         {poststate && (
-          <div className="justify-items-center  items-center border m-3 gap-2 border-gray-300 rounded-xl">
+          <div
+            className={`justify-items-center  items-center border m-3 gap-2 ${borderSelectedGray} rounded-xl`}
+          >
             <PostAdd createPost={createPost} />
             <PostsLayout>
               {posts.map((post) => (

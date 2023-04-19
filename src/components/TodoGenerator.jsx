@@ -7,10 +7,13 @@ import Todos from "../components/Todos";
 const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || [];
 //Context
 import { useLanguajeContex } from "../context/LanguajeContex";
+import { useInteractionContex } from "../context/InteractionContex";
 const TodoGenerator = () => {
   const { languaje } = useLanguajeContex();
   const [todos, setTodos] = useState(initialStateTodos);
   const [todoMaker, setTodoMaker] = useState(false);
+  const { borderSelectedGreen } = useInteractionContex();
+  const { borderSelectedGray } = useInteractionContex();
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -53,7 +56,9 @@ const TodoGenerator = () => {
     });
   };
   return (
-    <div className="grid m-2 justify-items-center  items-center border border-lime-300">
+    <div
+      className={`grid m-2 justify-items-center  items-center border ${borderSelectedGreen}`}
+    >
       <h1
         className="my-4 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl cursor-pointer font-bold"
         onClick={() => setTodoMaker(!todoMaker)}
@@ -61,7 +66,9 @@ const TodoGenerator = () => {
         {languaje ? "Todo Maker" : "Generador de Tareas"}
       </h1>
       {todoMaker && (
-        <div className="grid m-2 justify-items-center  items-center border border-gray-300 rounded-xl">
+        <div
+          className={`grid m-2 justify-items-center  items-center border ${borderSelectedGray} rounded-xl`}
+        >
           <TodoFormulario addTodo={addTodo} />
           <Todos
             todos={orderMake(orderTodo(todos))}

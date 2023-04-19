@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import getCharactersApi from "../api/getCharactersApi";
 import RickAndMorthyCard from "./RickAndMorthyCard";
-
+//Context
+import { useInteractionContex } from "../context/InteractionContex";
 const RickAndMortyGenerator = () => {
   const [state, setState] = useState(false);
+  const { borderSelectedGreen } = useInteractionContex();
   const [charactersList, setCharactersList] = useState([]);
   const urlBase = "https://rickandmortyapi.com/api";
   useEffect(() => {
@@ -17,7 +19,9 @@ const RickAndMortyGenerator = () => {
   };
 
   return (
-    <div className="grid m-2 justify-items-center  items-center border border-lime-300 p-2">
+    <div
+      className={`grid m-2 justify-items-center  items-center border ${borderSelectedGreen}`}
+    >
       <h1
         className="my-4 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl cursor-pointer font-bold"
         onClick={() => setState(!state)}

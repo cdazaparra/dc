@@ -2,9 +2,14 @@
 import React from "react";
 //Imagenes
 import imgLogo from "../assets/images/logo.png";
+//Context
+import { useInteractionContex } from "../context/InteractionContex";
 const HomeSeparator = () => {
+  const { colorSelectedBlue } = useInteractionContex();
   return (
-    <div className="m-auto w-full bg-blue-400 justify-items-center  items-center">
+    <div
+      className={`m-auto w-full ${colorSelectedBlue} justify-items-center  items-center`}
+    >
       <img
         className="m-auto p-1"
         src={imgLogo}
