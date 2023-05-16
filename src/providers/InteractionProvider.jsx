@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { InteractionContex } from "../context/InteractionContex";
 const InteractionProvider = ({ children }) => {
   const [color, setColor] = useState(false);
-  const [position, setPosition] = useState(false);
   const colorSelectedBlue = color ? "bg-blue-900" : "bg-blue-400";
   const colorSelectedGreen = color ? "bg-lime-900" : "bg-lime-400";
   const borderSelectedGreen = color ? "border-lime-600" : "border-lime-300";

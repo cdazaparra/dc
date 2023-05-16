@@ -6,9 +6,9 @@ import Home from "../pages/Home";
 import Study from "../pages/Study";
 import Works from "../pages/Works";
 import NotFound from "../pages/NotFound";
+import Projects from "../pages/Projects";
 // COMPONENTE BASE
 import Layout from "../layout/Layout";
-import Projects from "../pages/Projects";
 const router = createBrowserRouter([
   {
     path: "/",

@@ -7,7 +7,6 @@ import { useLanguajeContex } from "../context/LanguajeContex";
 import { useInteractionContex } from "../context/InteractionContex";
 //Imagenes
 import imgLogo from "../assets/images/logo.png";
-import imgPositionMenu from "../assets/icons/diagram.png";
 import imgThemeMenu from "../assets/icons/day-and-night.png";
 import imgLanguageMenuEs from "../assets/icons/languageEs.png";
 import imgLanguageMenuEng from "../assets/icons/languageEng.png";
@@ -20,7 +19,6 @@ const Menu = () => {
   const { languaje } = useLanguajeContex();
   const { handleClick } = useLanguajeContex();
   const { languajeSelected } = useLanguajeContex();
-  const { color } = useInteractionContex();
   const { colorSelectedBlue } = useInteractionContex();
   const { handleColor } = useInteractionContex();
   return (
