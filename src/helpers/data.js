@@ -568,7 +568,7 @@ export const dataWorks = [
     cargo: "Coordinador de estadistica",
     empresa: "ESE Hospital Regional de Chiquinquirá",
     ingreso: "Septiembre de 2011",
-    egreso: "Octubre de 2011",
+    egreso: "Octubre de 2012",
     descripción:
       "Analisis de datos del hospital por medio de consultas al servidos, generador de indicadores y análisis de riesgos."
   },
