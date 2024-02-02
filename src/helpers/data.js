@@ -580,7 +580,7 @@ export const dataWorks = [
     ingreso: "Marzo de 2013",
     egreso: "Octubre de 2013",
     descripción:
-      "Analisis de datos del hospital por medio de consultas al servidos, generador de indicadores y análisis de riesgos."
+      "Docente de tecnología, matemáticas y física"
   },
   {
     id: number(),
