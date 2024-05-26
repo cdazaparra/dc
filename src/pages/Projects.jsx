@@ -12,6 +12,7 @@ const Projects = () => {
         <TodoGenerator></TodoGenerator>
         <PokeApiGenerator></PokeApiGenerator>
         <RickAndMortyGenerator></RickAndMortyGenerator>
+        <link href="https://endearing-mermaid-953900.netlify.app" title="Test en vue"/>
       </div>
     </div>
   );
