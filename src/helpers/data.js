@@ -8,6 +8,8 @@ import imgWork3 from "../assets/images/work3.png";
 import imgWork4 from "../assets/images/work4.png";
 import imgWork5 from "../assets/images/work5.png";
 import imgWork6 from "../assets/images/work6.png";
+import imgWork7 from "../assets/images/work7.png";
+import imgWork8 from "../assets/images/work8.png";
 import NetGitHub from "../assets/images/github.png";
 import NetPlatzi from "../assets/images/platzi.png";
 import NetLinkedId from "../assets/images/LinkedIn.png";
@@ -621,6 +623,26 @@ export const dataWorks = [
     egreso: "Marzo de 2023",
     descripción:
       "Resolución de problemas, Desarrollo front end, Habilidades sociales, Desarrollo de software, Trabajo en equipo, JavaScript."
+  },
+  {
+    id: number(),
+    src: imgWork7,
+    cargo: "Docente",
+    empresa: "Universitaria de Colombia",
+    ingreso: "Septiembre de 2023",
+    egreso: "Mayo de 2024",
+    descripción:
+      "Docente de desarrollo de video juegos, bases de datos, diseño webm entre otros"
+  },
+  {
+    id: number(),
+    src: imgWork8,
+    cargo: "Docente",
+    empresa: "Universitaria de Colombia",
+    ingreso: "Junio de 2024",
+    egreso: "Actualmente",
+    descripción:
+      "Docente de Cloud Computing (AWS/Azure)"
   }
 ];
 
