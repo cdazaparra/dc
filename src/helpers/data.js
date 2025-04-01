@@ -638,9 +638,9 @@ export const dataWorks = [
     id: number(),
     src: imgWork8,
     cargo: "Docente",
-    empresa: "Universitaria de Colombia",
+    empresa: "UTecnalia Colombia",
     ingreso: "Junio de 2024",
-    egreso: "Actualmente",
+    egreso: "Febrero 2025",
     descripción:
       "Docente de Cloud Computing (AWS/Azure)"
   }
