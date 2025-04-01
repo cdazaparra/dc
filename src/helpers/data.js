@@ -12,6 +12,7 @@ import imgWork7 from "../assets/images/work7.png";
 import imgWork8 from "../assets/images/work8.png";
 import NetGitHub from "../assets/images/github.png";
 import NetPlatzi from "../assets/images/platzi.png";
+import Sena from "../assets/images/sena.png";
 import NetLinkedId from "../assets/images/LinkedIn.png";
 import NetCvlac from "../assets/images/cvlac.png";
 const api = "https://pokeapi.co/api/v2/";
@@ -50,6 +51,16 @@ export const dataStudy = [
     metodo: "Tesis de grado:",
     descripción:
       "Sistema Integrado de Gestión de Calidad y Medio Ambiente en la especialidad de Ergonomía y Psicosociología Aplicada."
+  },
+  {
+    id: number(),
+    src: Sena,
+    title: "Tecnólogo en Desarrollo de Medios Gráficos Visuales",
+    university: "SENA",
+    egreso: "Por definir",
+    metodo: "Por definir:",
+    descripción:
+      "Por definir"
   }
 ];
 export const dataCourses = [
