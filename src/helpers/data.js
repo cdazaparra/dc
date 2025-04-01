@@ -649,7 +649,7 @@ export const dataWorks = [
     id: number(),
     src: imgWork8,
     cargo: "Docente",
-    empresa: "UTecnalia Colombia",
+    empresa: "Tecnalia Colombia",
     ingreso: "Junio de 2024",
     egreso: "Febrero 2025",
     descripción:
