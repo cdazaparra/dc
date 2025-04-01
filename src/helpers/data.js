@@ -13,6 +13,7 @@ import imgWork8 from "../assets/images/work8.png";
 import NetGitHub from "../assets/images/github.png";
 import NetPlatzi from "../assets/images/platzi.png";
 import Sena from "../assets/images/sena.png";
+import Jala from "../assets/images/jala.png";
 import NetLinkedId from "../assets/images/LinkedIn.png";
 import NetCvlac from "../assets/images/cvlac.png";
 const api = "https://pokeapi.co/api/v2/";
@@ -654,6 +655,16 @@ export const dataWorks = [
     egreso: "Febrero 2025",
     descripción:
       "Docente de Cloud Computing (AWS/Azure)"
+  },
+  {
+    id: number(),
+    src: Jala,
+    cargo: "Docente",
+    empresa: "Jala University",
+    ingreso: "Febrero 2025",
+    egreso: "Marzo 2025",
+    descripción:
+      "Algoritmos 1"
   }
 ];
 
